@@ -7,6 +7,10 @@ from sklearn.metrics.pairwise import cosine_similarity
 import networkx as nx
 import streamlit as st
 
+# Download necessary NLTK data files
+nltk.download('punkt')
+nltk.download('stopwords')
+
 def preprocess_words(text):
     stop_words = set(stopwords.words('english'))
     words = word_tokenize(text.lower())
