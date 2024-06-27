@@ -7,10 +7,6 @@ from nltk.tokenize import sent_tokenize, word_tokenize
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 
-# Download necessary NLTK data files
-nltk.download('punkt')
-nltk.download('stopwords')
-
 def preprocess_text(text):
     stop_words = set(stopwords.words('english'))
     words = word_tokenize(text.lower())
